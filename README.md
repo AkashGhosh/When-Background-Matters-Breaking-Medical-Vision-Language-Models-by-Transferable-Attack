@@ -220,9 +220,9 @@ Runs FGSM, MI-FGSM, or PGD attacks using an ensemble of CLIP surrogate models wi
 **Default paths in `config_schema.py`:**
 
 ```python
-cle_data_path  = "resources/images/bigscale"       # source images (from Step 3 copy)
-tgt_data_path  = "resources/images/target_images"  # white text images (from Step 2 copy)
-mask_data_path = "resources/images/masks"          # segmentation masks
+cle_data_path  = "resources/images/bigscale"       # source images (Clean Images)
+tgt_data_path  = "resources/images/target_images"  # target images (from Step 3 copy)
+mask_data_path = "resources/images/masks"          # segmentation masks (Mask of those Clean Images)
 output         = "./img_output"
 ```
 
@@ -275,7 +275,7 @@ Edit the three path variables and PGD parameters at the top of `run_attack2.py`:
 
 ```python
 IMAGE_DIR  = "Imgs/"     # images copied from Step 4 output
-MASK_DIR   = "masks/"    # segmentation masks
+MASK_DIR   = "masks/"    # Segmentation masks of the clean Images
 RESULT_DIR = "results/"  # final adversarial outputs
 
 NUM_STEPS = 500
