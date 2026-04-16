@@ -2,11 +2,6 @@
 [ ACL 2026 ORAL ] MedFocusLeak is a transferable black-box multimodal adversarial attack that injects imperceptible perturbations into non-diagnostic background regions and shifts model attention to induce plausible but incorrect medical diagnoses.
 
 
-# When Background Matters: Breaking Medical Vision-Language Models by Transferable Attack
-
-## Overview
-
-This repository contains the implementation of **MedFocusLeak**, a transferable adversarial attack framework targeting Medical Vision-Language Models (Med-VLMs). The pipeline generates adversarial perturbations by exploiting background regions in medical images, corrupts radiology findings text, and evaluates attack transferability across multiple surrogate CLIP/BLIP-based models.
 
 ---
 
