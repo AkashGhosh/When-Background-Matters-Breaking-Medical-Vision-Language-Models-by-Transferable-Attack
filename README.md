@@ -4,6 +4,7 @@
 <p align="center">
   <a href="https://arxiv.org/abs/2603.24157"><img src="https://img.shields.io/badge/arXiv-2603.24157-b31b1b.svg" alt="arXiv"></a>
   <a href="https://arxiv.org/pdf/2603.24157"><img src="https://img.shields.io/badge/Paper-PDF-blue.svg" alt="PDF"></a>
+  <a href="https://akashghosh.github.io/MedFocusLeakACL/"><img src="https://img.shields.io/badge/Project-Page-green.svg" alt="Project Page"></a>
   <img src="https://img.shields.io/badge/ACL-2026-purple.svg" alt="ACL 2026">   
 </p>
 
