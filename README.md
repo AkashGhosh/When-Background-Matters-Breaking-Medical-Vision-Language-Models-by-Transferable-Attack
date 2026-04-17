@@ -443,6 +443,7 @@ We evaluate against four adversarial attack baselines. For each, we use the offi
 | AnyAttack | [jiamingzhang94/AnyAttack](https://github.com/jiamingzhang94/AnyAttack) |
 | M-Attack | [VILA-Lab/M-Attack](https://github.com/VILA-Lab/M-Attack) |
 | FOA-Attack | [jiaxiaojunqaq/foa-attack](https://github.com/jiaxiaojunqaq/foa-attack) |
+|AttackVLM| [yunqing-me/attackvlm](https://github.com/yunqing-me/attackvlm)
 
 We follow the default hyperparameters and setup as described in each respective repository. Refer to the original repos for installation and usage instructions.
 
