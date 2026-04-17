@@ -111,7 +111,7 @@ so that the generated image preserves medical image quality while inducing a cli
 
 ## Performance Deepdive
 
-
+![Performance Results](Project_Images/main_results_medfocusleak.png)
 
 ---
 
