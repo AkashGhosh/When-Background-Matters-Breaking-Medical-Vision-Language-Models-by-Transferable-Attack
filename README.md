@@ -36,25 +36,40 @@ perturbed regions, causing the model to rely on malicious cues and produce an in
 ## MedFocusLeak Framework
 
 ### 1. Adversarial Text Generation
-A targeted adversarial diagnosis is first generated that remains clinically plausible while being incorrect, ensuring that the original imaging modality is preserved but key diagnostic findings are subtly altered.
+Given a medical image $I$ and prompt $x$, the attack first generates a targeted adversarial diagnosis $x_{\text{adv}} = g_{\phi}(I, x)$ that remains clinically plausible while being incorrect, ensuring that the imaging modality is preserved while key diagnostic findings are altered.
 
 ### 2. Multimodal Adversarial Representation
-A joint image–text adversarial signal is constructed by initializing a seed image and embedding the adversarial text, enabling coordinated cross-modal manipulation that maintains semantic coherence.
+A joint adversarial seed is constructed across both image and text modalities so that the attack can manipulate multimodal reasoning in a coordinated way. The objective is to learn adversarial image and text representations that push the model toward a misleading target output while maintaining semantic coherence.
 
 ### 3. Iterative Cross-Modal Optimization
-The attack alternates between optimizing image perturbations using gradient-based updates and refining text through token-level substitutions, ensuring strong alignment between modalities and improving transferability.
+The optimization alternates between updating image perturbations and refining adversarial text, allowing both modalities to reinforce each other during attack construction. Formally, the image perturbation is updated as  
+$\delta_I^{(n+1)} = \text{Clip}\left(\delta_I^{(n)} - \alpha \cdot \text{sign}(\nabla_{\delta_I} L_{\text{img}})\right)$,  
+while the text branch is optimized using token-level substitutions to maximize cross-modal disruption and improve transferability.
+
 
 ### 4. Background-Constrained Perturbation
-The medical image is segmented to isolate diagnostically relevant regions, and perturbations are restricted to non-diagnostic background areas to preserve clinical content while remaining visually imperceptible.
+To preserve diagnostically critical content, the attack first segments the foreground medical region and restricts perturbations to non-diagnostic background areas only. The final adversarial image is formed as  
+$I_{\text{adv}}(\delta) = \text{clip}(I + M_k \odot \delta)$,  
+where $M_k$ is the background mask and $\delta$ is the learned perturbation applied only in selected background patches.
+
 
 ### 5. Patch-Based Semantic Alignment
-Perturbations are applied over selected background patches and optimized to align their feature representations with adversarial targets using surrogate models, embedding meaningful signals without introducing visible distortions.
+Within the selected background patches, the perturbation is optimized so that local image crops align with a target adversarial representation in feature space. This is achieved by minimizing  
+$\min_{\delta} \; \mathbb{E}_{\tau \sim T}\left[-\cos\left(E(\tau(I_{\text{adv}}(\delta))), E(\tau(I_{\text{target}}))\right)\right]$,  
+which encourages semantically meaningful adversarial signals while keeping the perturbation visually subtle.
+
 
 ### 6. Attention Shift Mechanism
-An attention distraction loss is introduced to suppress the model’s focus on pathological regions and redirect it toward perturbed background areas, effectively misleading the diagnostic reasoning process.
+To prevent the model from relying on the true pathological region, MedFocusLeak introduces an attention distraction loss that shifts visual focus from foreground to perturbed background regions. The loss is defined as  
+$L_{\text{attn}}(\delta) = \log(A_{\text{fg}}(\delta)) - \log(A_{\text{bg}}(\delta))$,  
+where minimizing this objective suppresses attention on clinically salient foreground regions and amplifies attention on adversarial background cues.
 
-### 7. Final Adversarial Output
-The final output is an imperceptible adversarial medical image that preserves visual quality while inducing the model to generate a plausible but incorrect diagnosis.
+
+### 7. Final Adversarial Objective
+The overall attack combines semantic alignment with attention manipulation to generate imperceptible but effective adversarial examples. The final optimization objective is  
+$L_{\text{final}}(\delta) = L_{\text{loc}}(\delta) + \lambda_{\text{attn}} L_{\text{attn}}(\delta)$,  
+so that the generated image preserves medical image quality while inducing a clinically plausible but incorrect diagnosis.
+
 
 
 ## Threat Framework
