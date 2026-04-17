@@ -132,6 +132,12 @@ so that the generated image preserves medical image quality while inducing a cli
 | **MedFocusLeak (ε = 16)** | **0.74 / 0.85 / 0.63** | **0.48 / 0.85 / 0.40** | **0.39 / 0.87 / 0.33** |
 
 
+## Qualitative Evaluation 
+
+<p align="center">
+  <img src="./Project_Images/medfocus_attack_1.jpg" />
+</p>
+
 ---
 
 ## Repository Structure
