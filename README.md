@@ -115,6 +115,22 @@ so that the generated image preserves medical image quality while inducing a cli
 
 ![Performance Results](Project_Images/main_results_medfocusleak.png)
 
+
+
+## Ablation Study Results
+
+| Setting | QwenVL-7B (MTR / AvgSim / MAS) | Gemini 2.5 Pro (MTR / AvgSim / MAS) | MedVLM-R1 (MTR / AvgSim / MAS) |
+|---|---|---|---|
+| Ablation 1 (only Image) | 0.47 / 0.79 / 0.37 | 0.26 / 0.79 / 0.20 | 0.28 / 0.79 / 0.22 |
+| Ablation 1 (only Text) | 0.62 / 0.81 / 0.50 | 0.37 / 0.81 / 0.30 | 0.38 / 0.81 / 0.30 |
+| **MedFocusLeak** | **0.74 / 0.85 / 0.62** | **0.46 / 0.86 / 0.39** | **0.39 / 0.87 / 0.33** |
+| Ablation 2 (w/o attention shift) | 0.55 / 0.88 / 0.48 | 0.27 / 0.88 / 0.24 | 0.30 / 0.88 / 0.26 |
+| **MedFocusLeak** | **0.74 / 0.85 / 0.63** | **0.46 / 0.85 / 0.39** | **0.39 / 0.85 / 0.33** |
+| Ablation 3 (ε = 4) | 0.43 / 0.92 / 0.39 | 0.33 / 0.92 / 0.30 | 0.25 / 0.92 / 0.23 |
+| Ablation 3 (ε = 8) | 0.57 / 0.88 / 0.50 | 0.34 / 0.88 / 0.30 | 0.29 / 0.88 / 0.26 |
+| **MedFocusLeak (ε = 16)** | **0.74 / 0.85 / 0.63** | **0.48 / 0.85 / 0.40** | **0.39 / 0.87 / 0.33** |
+
+
 ---
 
 ## Repository Structure
