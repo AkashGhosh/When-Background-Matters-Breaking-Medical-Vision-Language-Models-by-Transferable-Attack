@@ -23,7 +23,9 @@ Our contributions can be summarized as:
 
 (iii) **Extensive experiments across six medical datasets and modalities** showing state-of-the-art performance in inducing clinically plausible misdiagnoses in black-box VLMs.
 
-## Architecture
+## Framework
+
+![MedFocusLeak Architecture](Project_Images/multimodal_MedFocusLeak.jpg)
 
 
 ## Threat Model Deep Dive
