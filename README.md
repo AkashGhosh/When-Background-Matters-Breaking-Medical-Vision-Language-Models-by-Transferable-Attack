@@ -25,7 +25,7 @@ Our contributions can be summarized as:
 
 ## Framework
 
-![MedFocusLeak Architecture](Project_Images/multimodal_MedFocusLeak.jpg)
+![MedFocusLeak Architecture](Project_Images/multimodal_medfocusleak.jpg)
 
 
 ## Threat Model Deep Dive
