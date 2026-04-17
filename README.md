@@ -111,6 +111,8 @@ so that the generated image preserves medical image quality while inducing a cli
 
 ## Performance Deepdive
 
+**Performance of different attacks:** MTR, AvgSim, and MAS across different models. Numbers highlighted in blue indicate that the improvement over the best baseline is statistically significant (two-tailed paired t-test with p < 0.05).
+
 ![Performance Results](Project_Images/main_results_medfocusleak.png)
 
 ---
