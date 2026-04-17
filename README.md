@@ -33,6 +33,29 @@ signal. The resulting perturbation is confined to non-diagnostic background regi
 preserving clinical content. An attention-shift loss then explicitly redirects the model’s visual focus toward these
 perturbed regions, causing the model to rely on malicious cues and produce an incorrect diagnosis.
 
+## MedFocusLeak Framework
+
+### 1. Adversarial Text Generation
+A targeted adversarial diagnosis is first generated that remains clinically plausible while being incorrect, ensuring that the original imaging modality is preserved but key diagnostic findings are subtly altered.
+
+### 2. Multimodal Adversarial Representation
+A joint image–text adversarial signal is constructed by initializing a seed image and embedding the adversarial text, enabling coordinated cross-modal manipulation that maintains semantic coherence.
+
+### 3. Iterative Cross-Modal Optimization
+The attack alternates between optimizing image perturbations using gradient-based updates and refining text through token-level substitutions, ensuring strong alignment between modalities and improving transferability.
+
+### 4. Background-Constrained Perturbation
+The medical image is segmented to isolate diagnostically relevant regions, and perturbations are restricted to non-diagnostic background areas to preserve clinical content while remaining visually imperceptible.
+
+### 5. Patch-Based Semantic Alignment
+Perturbations are applied over selected background patches and optimized to align their feature representations with adversarial targets using surrogate models, embedding meaningful signals without introducing visible distortions.
+
+### 6. Attention Shift Mechanism
+An attention distraction loss is introduced to suppress the model’s focus on pathological regions and redirect it toward perturbed background areas, effectively misleading the diagnostic reasoning process.
+
+### 7. Final Adversarial Output
+The final output is an imperceptible adversarial medical image that preserves visual quality while inducing the model to generate a plausible but incorrect diagnosis.
+
 
 ## Threat Framework
 
