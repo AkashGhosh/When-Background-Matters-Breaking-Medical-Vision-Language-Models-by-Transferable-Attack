@@ -10,9 +10,18 @@
 
 ## Abstract
 
+Vision–Language Models (VLMs) are increasingly used in clinical diagnostics, yet their robustness to adversarial attacks remains largely unexplored, posing significant risks. Existing medical attacks often target secondary goals such as model stealing or adversarial fine-tuning, while transferable attacks from natural images introduce visible distortions that clinicians can easily detect. To address this, we propose MedFocusLeak, a highly transferable black-box multimodal attack that induces incorrect medical diagnoses while keeping perturbations imperceptible. The method injects coordinated perturbations into non-diagnostic background regions and uses an attention-distraction mechanism to shift the model’s focus away from pathological areas. Across six medical imaging modalities, MedFocusLeak achieves state-of-the-art performance, generating plausible yet incorrect diagnostic outputs across diverse VLMs. We also introduce a unified evaluation framework with novel metrics that jointly measure attack success and image fidelity. Overall, our findings reveal a critical weakness in the reasoning capabilities of modern VLMs in clinical settings.
+
 
 ## Contributions
 
+Our contributions can be summarized as:
+
+(i) First systematic study of transferable adversarial attacks in medical vision–language models under realistic black-box settings.
+
+(ii) Introduction of MedFocusLeak, a multimodal attack that creates semantically aware, visually imperceptible perturbations while preserving diagnostic quality.
+
+(iii) Extensive experiments across six medical datasets and modalities showing state-of-the-art performance in inducing clinically plausible misdiagnoses in black-box VLMs.
 
 ## Architecture
 
