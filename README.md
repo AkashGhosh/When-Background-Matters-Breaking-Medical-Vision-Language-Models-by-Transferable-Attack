@@ -433,6 +433,18 @@ python run_attack2.py
 
 
 ---
+## Baselines
+
+We evaluate against four adversarial attack baselines. For each, we use the official implementation to generate adversarial examples from source-target image pairs.
+
+| Method | Repository |
+|--------|-----------|
+| Attack-Bard | [thu-ml/Attack-Bard](https://github.com/thu-ml/Attack-Bard) |
+| AnyAttack | [jiamingzhang94/AnyAttack](https://github.com/jiamingzhang94/AnyAttack) |
+| M-Attack | [VILA-Lab/M-Attack](https://github.com/VILA-Lab/M-Attack) |
+| FOA-Attack | [jiaxiaojunqaq/foa-attack](https://github.com/jiaxiaojunqaq/foa-attack) |
+
+We follow the default hyperparameters and setup as described in each respective repository. Refer to the original repos for installation and usage instructions.
 
 ## Acknowledgements 
 
