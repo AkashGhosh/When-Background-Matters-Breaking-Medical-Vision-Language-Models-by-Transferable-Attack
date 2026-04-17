@@ -27,6 +27,13 @@ Our contributions can be summarized as:
 
 ![MedFocusLeak Architecture](Project_Images/multimodal_medfocusleak.jpg)
 
+**Framework of MedFocusLeak:** The attack first generates a targeted adversarial text that defines the
+malicious diagnostic objective and guides joint image–text optimization to synthesize a multimodal adversarial
+signal. The resulting perturbation is confined to non-diagnostic background regions to remain imperceptible while
+preserving clinical content. An attention-shift loss then explicitly redirects the model’s visual focus toward these
+perturbed regions, causing the model to rely on malicious cues and produce an incorrect diagnosis.
+
+
 
 ## Threat Model Deep Dive
 
