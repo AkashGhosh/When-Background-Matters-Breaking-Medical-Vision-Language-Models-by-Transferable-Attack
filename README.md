@@ -17,9 +17,11 @@ Vision–Language Models (VLMs) are increasingly used in clinical diagnostics, y
 
 Our contributions can be summarized as:
 
-(i) First systematic study of transferable adversarial attacks in medical vision–language models under realistic black-box settings.
-(ii) Introduction of MedFocusLeak, a multimodal attack that creates semantically aware, visually imperceptible perturbations while preserving diagnostic quality.
-(iii) Extensive experiments across six medical datasets and modalities showing state-of-the-art performance in inducing clinically plausible misdiagnoses in black-box VLMs.
+(i) First **systematic study of transferable adversarial attacks in medical vision–language models** under realistic black-box settings.
+
+(ii) Introduction of **MedFocusLeak**, a multimodal attack that creates semantically aware, visually imperceptible perturbations while preserving diagnostic quality.
+
+(iii) **Extensive experiments across six medical datasets and modalities** showing state-of-the-art performance in inducing clinically plausible misdiagnoses in black-box VLMs.
 
 ## Architecture
 
