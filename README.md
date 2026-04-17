@@ -78,20 +78,15 @@ so that the generated image preserves medical image quality while inducing a cli
 - We consider a medical vision–language model (f) that takes a medical image and a clinical prompt as input and generates a diagnostic report.  
 - The model is accessed in a **black-box setting** (API-only access), with no visibility into parameters, gradients, or training data, reflecting real-world clinical deployment.
 
----
-
 ### 2. Provider Assumptions
 - The provider has full control over model training, preprocessing, and deployment pipelines.  
 - The objective is to generate **accurate and clinically reliable diagnoses** for user queries.
-
----
 
 ### 3. Attacker Knowledge
 - The attacker knows the task interface (image + text → diagnostic text).  
 - Has access to **surrogate models** (e.g., open-source VLMs, CLIP-like encoders) to craft transferable attacks.  
 - Operates under **limited or zero query access** to the target model.
 
----
 
 ### 4. Attacker Capabilities
 - Can perturb the **input image and/or prompt** to construct adversarial inputs.  
@@ -100,8 +95,6 @@ so that the generated image preserves medical image quality while inducing a cli
   - **Clinical consistency**: modality and semantics remain unchanged.  
   - **Realism**: no white-box assumptions; relies on transferability.
 
----
-
 ### 5. Attack Objective
 - Generate **plausible but incorrect medical diagnoses**.  
 - Specifically:
@@ -109,7 +102,6 @@ so that the generated image preserves medical image quality while inducing a cli
   - Induce reliance on **adversarial background cues**.  
   - Preserve diagnostic realism to avoid detection by clinicians.
 
----
 
 ### 6. Core Threat Insight
 - The attack leverages **shared feature representations and attention patterns** across models.  
