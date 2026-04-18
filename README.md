@@ -250,10 +250,10 @@ pip install -r requirements.txt
 Before running, place your data in the following locations:
 
 ```bash
-# Clean source medical images (ImageFolder format — one subfolder per class)
+# Clean source medical images (Image Folder format — one subfolder per class)
 MedFocusLeak/Modified_mattack/resources/images/bigscale/<class>/image.jpg
 
-# Segmentation masks matching the source images (same ImageFolder structure)
+# Segmentation masks matching the source images (same Image Folder structure) 
 MedFocusLeak/Modified_mattack/resources/images/masks/<class>/mask.png
 MedFocusLeak/attentionshift/masks/<class>/mask.png
 
@@ -440,6 +440,13 @@ python run_attack2.py
 
 
 ---
+## Segmentation 
+For Medical Images segmentation we used MedSAM for getting those masked images of the source images. Refer to the original repo for installation and usage instructions.
+
+| Method | Repository| 
+|--------|-----------|
+| MedSAM | [bowang-lab/MedSAM](https://github.com/bowang-lab/MedSAM) |
+
 ## Baselines
 
 We evaluate against four adversarial attack baselines. For each, we use the official implementation to generate adversarial examples from source-target image pairs.
