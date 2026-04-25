@@ -464,3 +464,19 @@ We follow the default hyperparameters and setup as described in each respective 
 ## Acknowledgements 
 
 This project code  is built on top of  M-Attack. We extend our sincere appreciation for their exceptional contributions.
+
+---
+
+## Citation
+
+If you find our work useful or use it in your research, please consider citing:
+
+```bibtex
+@article{ghosh2026background,
+  title={When Background Matters: Breaking Medical Vision Language Models by Transferable Attack},
+  author={Ghosh, Akash and Baidya, Subhadip and Saha, Sriparna and Chen, Xiuying},
+  journal={arXiv preprint arXiv:2604.17318},
+  year={2026}
+}
+```
+
